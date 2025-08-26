@@ -4,7 +4,6 @@ from directory_management import Directory
 
 # RECURSO DE HISTÓRICO**
     # O PROGRAMA NÃO ESTÁ ARMAZENANDO, NO HISTÓRICO, LINHAS COM MAIS DE 2 PARAMETROS
-# criar função de saída do programa
 
 def changeDir(arg = None):
     if arg == None:
@@ -47,26 +46,27 @@ def history(index = None):
         print("o histórico solicitado não está armazenado.\n")
 def execute(*functools):
     if len(functools) == 1:
-        cmd_history.append(functools[0])
+        cmd_history.append(functools[0])#####adicionando 2x vezes
         paramters[functools[0]][0]()
-    else:
+    else:#colocar catch direto no execute para herdar dos outros
         cmd_history.append(functools)
         paramters[functools[0]][0](*functools[1:])
 def catch_errors(command, qtparams):
     if command not in paramters.keys():
         cmd_history.append(command)
         print(f"'{command}' não é reconhecido como comando interno ou externo,\nprograma operável ou arquivo batch.\n")
-    elif qtparams != paramters[command][1]:
+    elif qtparams != paramters[command][1]:########adicionando 2x vezes
+        cmd_history.append(command)
         qt_func_params = paramters[command][1]
         print(f"'{command}' deve haver {qt_func_params} parâmetros.\n")
     else:
+        cmd_history.append(command)
         return True
-        
 paramters = {"dir": (showSubDirs, 0),
              "cd": (changeDir, 1),
              "!!": (history, 0),
              "!": (history, 1),
-             "exit": (exit, 0)
+             "exit": (exit, 0),
              }
 PATHDIR = Directory(Path(__file__).parent)
 cmd_history = []

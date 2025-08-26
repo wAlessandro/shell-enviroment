@@ -1,0 +1,6 @@
+lógica
+
+funcionalidades
+
+tratamento de erros
+
