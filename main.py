@@ -6,6 +6,8 @@ def changeDir(arg: tuple[str] = None):
         print(PATHDIR)
     elif arg[0] == "..":
         PATHDIR.back()
+    elif arg[0].count(".") > 2:
+        return
     else:
         __dir = PATHDIR.get / arg[0]
         if os.path.isdir(__dir):
@@ -74,5 +76,4 @@ cmd_history: list = []
 while True:
     entrada: str = input(f"{PATHDIR.get}>").strip().split(" ")
     cmd_history.append(tuple(entrada))
-    if catch_typing_errors(entrada[0], len(entrada) - 1):
-        execute(*entrada)
+    execute(*entrada)
