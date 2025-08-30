@@ -1,5 +1,5 @@
 Conceito-->
-Foco do shell -> gerenciamento
+Foco do shell: gerenciamento de diretórios e programas
 
 Lógica-->
  O programa separa cada parâmetro em cada espaço digitado pelo usuário e os executam dentro de tuplas, que serão utilizadas para inicializar e gerenciar as funções internas.
@@ -16,3 +16,6 @@ exit: fecha o programa.
 showh: imprime os comandos do histórico. 
 start [nome do arquivo]: executa programa indicado no diretório atual.
 
+Melhorias-->
+°Inserção do comando de historico na entrada
+°Apresentação de detalhes técnicos sobre diretórios e executáveis

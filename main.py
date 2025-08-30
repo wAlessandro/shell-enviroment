@@ -48,12 +48,12 @@ def startProgram(program_name):
     if os.system(f"start {file_path} 2>nul") != 0:
         print(f"O sistema não pôde encontrar o arquivo {file_path}\n")
 def execute(*functools: str):
-    if catch_typing_errors(functools[0], len(functools) - 1):
+    if catchTypingErrors(functools[0], len(functools) - 1):
         if len(functools) == 1:
             paramters[functools[0]][0]()
         else:
             paramters[functools[0]][0](functools[1:])
-def catch_typing_errors(command: str, qtparams: int) -> bool:
+def catchTypingErrors(command: str, qtparams: int) -> bool:
     if command not in paramters.keys():
         print(f"'{command}' não é reconhecido como comando interno ou externo,\nprograma operável ou arquivo batch.\n")
         return False
