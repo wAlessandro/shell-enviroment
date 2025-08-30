@@ -9,8 +9,8 @@ Tratamento de erros-->
  Além do tratamento de erro de digitação, dentro das funções, cada uma tem seu próprio tratamento de erros mais internos.
 
 Funcionalidades-->
-cd [caminho]: permite alterar o caminho atual de gerenciamento.
-!!: execute o último comando digitado.
+cd [caminho]: permite alterar o caminho atual de gerenciamento.  
+!!: execute o último comando digitado.  
 ! [x]: execute o comando indexado, a partir do histórico.
 exit: fecha o programa. 
 showh: imprime os comandos do histórico. 
