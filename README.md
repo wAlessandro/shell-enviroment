@@ -10,7 +10,7 @@ Tratamento de erros--><br>
 
 Funcionalidades--><br>
 cd [caminho]: permite alterar o caminho atual de gerenciamento.<br>
-!!: execute o último comando digitado.<br>
+!! : execute o último comando digitado.<br>
 ! [x]: execute o comando indexado, a partir do histórico.<br>
 exit: fecha o programa.<br>
 showh: imprime os comandos do histórico.<br>
