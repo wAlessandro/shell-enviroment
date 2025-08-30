@@ -1,6 +1,6 @@
 <h1>Shell Enviroment</h1>
 <b>Conceito--></b><br>
-Foco do shell -> gerenciamento de diretórios e arquivos
+Foco do shell -> gerenciamento de diretórios e arquivos<br>
 
 <b>Lógica--></b><br>
  O programa separa cada parâmetro em cada espaço digitado pelo usuário e os executam dentro de tuplas, que serão utilizadas para inicializar e gerenciar as funções internas.
