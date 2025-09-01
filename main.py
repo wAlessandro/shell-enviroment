@@ -14,7 +14,7 @@ CLS         Limpa o terminal.
 COLOR       Altera a cor do terminal.
 """)
 def changeColor(color: tuple):
-    colors = {"black": 0,
+    colors = {
               "blue": 1,
               "green": 2,
               "aqua": 3,
@@ -22,6 +22,12 @@ def changeColor(color: tuple):
               "purple": 5,
               "yellow": 6,
               "white": 7}
+    if color[0] not in colors.keys():
+        print("Parâmetro inválido.\n")
+        print("|Cores disponíveis")
+        for key in colors.keys():
+            print("-", key.upper())
+        return
     os.system(f"COLOR {colors[color[0]]}")
 def clearTerminal():
     os.system("cls")
@@ -76,7 +82,7 @@ def catchTypingErrors(command: str, qtparams: int) -> bool:
         return False
     elif qtparams != paramters[command][1]:
         qt_func_params = paramters[command][1]
-        print(f"'{command}' deve haver {qt_func_params} parâmetros.\n")
+        print(f"'{command}' deve haver {qt_func_params} parâmetro(s).\n")
         return False
     else:
         return True
