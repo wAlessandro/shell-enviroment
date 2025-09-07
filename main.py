@@ -55,13 +55,13 @@ def changeDir(arg: tuple[str] = None):
             PATHDIR.add(arg[0])
         else:
             print(f"{__dir} é um diretório inválido.\n")
-def revert(index: tuple[str] = None):
+def rollback(index: tuple[str] = None):
     def exec_history(index: int):
         if len(cmd_history[index]) > 1:
             print("->", *cmd_history[index])
             execute(*cmd_history[index]) # É preciso desempacotar porque o histórico armazena tupla quando há parâmetros
         else:
-            print(f"-> ", *cmd_history[index])
+            print(f"->", *cmd_history[index])
             execute(*cmd_history[index])
     cmd_history.pop() # Deletei o último porque, para entrar na função, é preciso adicionar "!!" no histórico, então apaguei
     try:
@@ -95,8 +95,8 @@ def execute(*functools: str):
 paramters: dict[str, tuple] = {
             "dir": (showSubDirs, 0),
              "cd": (changeDir, 1),
-             "!!": (revert, 0),
-             "!": (revert, 1),
+             "!!": (rollback, 0),
+             "!": (rollback, 1),
              "exit": (exit, 0),
              "showh": (showHistory, 0),
              "start": (startProgram, 1),
