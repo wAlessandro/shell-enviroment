@@ -16,3 +16,10 @@ cd [caminho]: permite alterar o caminho atual de gerenciamento.<br>
 exit: fecha o programa.<br>
 showh: imprime os comandos do histórico.<br>
 start [nome do arquivo]: executa programa indicado no diretório atual.<br>
+cls: limpa o terminal.<br>
+color: altera a cor do terminal.<br>
+
+Melhorias-->
+°Inserção do comando de historico na entrada.
+°Detelhamento mais específico sobre diretórios e executáveis.
+°Possiblidade de execução padrão e com parametrização em algumas funções
