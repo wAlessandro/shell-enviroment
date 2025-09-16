@@ -21,6 +21,6 @@ cls: limpa o terminal.
 color: altera a cor do terminal.
 
 Melhorias-->
-°Inserção do comando de historico na entrada.
 °Detelhamento mais específico sobre diretórios e executáveis.
+°Inserção do comando de historico na entrada.
 °Possiblidade de execução padrão e com parametrização em algumas funções

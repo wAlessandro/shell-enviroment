@@ -19,7 +19,7 @@ start [nome do arquivo]: executa programa indicado no diretório atual.<br>
 cls: limpa o terminal.<br>
 color: altera a cor do terminal.<br>
 
-Melhorias-->
-°Inserção do comando de historico na entrada.
-°Detelhamento mais específico sobre diretórios e executáveis.
-°Possiblidade de execução padrão e com parametrização em algumas funções
+<b>Melhorias--></b><br>
+°Inserção do comando de historico na entrada.<br>
+°Detelhamento mais específico sobre diretórios e executáveis.<br>
+°Possiblidade de execução padrão e com parametrização em algumas funções<br>

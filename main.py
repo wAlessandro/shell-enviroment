@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 from directory_management import Directory
-#HELP
+
 def _help():
     print("""
 CD          Altera o caminho atual de gerenciamento.
@@ -59,11 +59,11 @@ def rollback(index: tuple[str] = None):
     def exec_history(index: int):
         if len(cmd_history[index]) > 1:
             print("->", *cmd_history[index])
-            execute(*cmd_history[index]) # É preciso desempacotar porque o histórico armazena tupla quando há parâmetros
+            execute(*cmd_history[index])
         else:
             print(f"->", *cmd_history[index])
             execute(*cmd_history[index])
-    cmd_history.pop() # Deletei o último porque, para entrar na função, é preciso adicionar "!!" no histórico, então apaguei
+    cmd_history.pop()
     try:
         if index == None:
             exec_history(-1)
